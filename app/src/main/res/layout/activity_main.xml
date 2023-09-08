@@ -10,10 +10,11 @@
     <Button
         android:id="@+id/calc1"
         style="@style/square_button"
-        android:layout_marginStart="12dp"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="1"
         android:textSize="20sp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,25 +24,25 @@
     <Button
         android:id="@+id/calc2"
         style="@style/square_button"
-
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="2"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/calc1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542"
+        app:layout_constraintVertical_bias="0.545"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/calc3"
         style="@style/square_button"
+        android:background="#D2C8C8"
+        android:layout_marginStart="16dp"
         android:gravity="center"
         android:text="3"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/calcDivision"
-        app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toEndOf="@+id/calc2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.542"
@@ -50,6 +51,7 @@
     <Button
         android:id="@+id/calc4"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="4"
         android:textSize="20sp"
@@ -62,6 +64,7 @@
     <Button
         android:id="@+id/calc5"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="5"
         android:textSize="20sp"
@@ -74,12 +77,11 @@
     <Button
         android:id="@+id/calc6"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="6"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/calcMultiply"
-        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toEndOf="@+id/calc5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.669"
@@ -88,6 +90,7 @@
     <Button
         android:id="@+id/calc7"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="7"
         android:textSize="20sp"
@@ -100,6 +103,7 @@
     <Button
         android:id="@+id/calc8"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="8"
         android:textSize="20sp"
@@ -112,11 +116,11 @@
     <Button
         android:id="@+id/calc9"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="9"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/calcSubtraction"
         app:layout_constraintStart_toEndOf="@+id/calc8"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.801"
@@ -125,6 +129,7 @@
     <Button
         android:id="@+id/calc0"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="0"
         android:textSize="20sp"
@@ -137,6 +142,7 @@
     <Button
         android:id="@+id/calcDecimal"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="."
         android:textSize="20sp"
@@ -149,12 +155,11 @@
     <Button
         android:id="@+id/calcNegative"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="(-)"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/calcAddition"
-        app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toEndOf="@+id/calc0"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.937"
@@ -163,98 +168,137 @@
     <Button
         android:id="@+id/calcAllClear"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="AC"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/calc1"
-        app:layout_constraintEnd_toStartOf="@+id/calcDeleteOne"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/calcDeleteOne"
         style="@style/square_button"
+        android:background="#D2C8C8"
+        android:layout_marginTop="284dp"
         android:gravity="center"
         android:text="<--"
         android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/calc2"
+        app:layout_constraintStart_toEndOf="@+id/calcAllClear"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="111dp" />
+        app:layout_constraintVertical_bias="0.157"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/calcExponent"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="^"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/calcDeleteOne"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.43"
+        app:layout_constraintVertical_bias="0.428"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/calcSquareRoot"
         style="@style/square_button"
-        android:layout_marginEnd="4dp"
+        android:background="#D2C8C8"
+        android:layout_marginTop="284dp"
         android:gravity="center"
         android:text="√"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/calcDivision"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toEndOf="@+id/calcExponent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.105"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/calcMultiply"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="X"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calc6"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615"
+        app:layout_constraintVertical_bias="0.669"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/calcDivision"
         style="@style/square_button"
+        android:background="#D2C8C8"
+        android:layout_marginBottom="304dp"
         android:gravity="center"
         android:text="/"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.523"
+        app:layout_constraintStart_toEndOf="@+id/calc3"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/calcAddition"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="+"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calcNegative"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.801"
+        app:layout_constraintVertical_bias="0.937"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/calcSubtraction"
         style="@style/square_button"
+        android:background="#D2C8C8"
         android:gravity="center"
         android:text="-"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calc9"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708"
+        app:layout_constraintVertical_bias="0.801"
         tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/currentOutput"
+        android:layout_width="378dp"
+        android:layout_height="133dp"
+        android:background="@color/md_theme_light_inverseOnSurface"
+        android:gravity="right"
+        android:text="Current"
+        android:textSize="@dimen/fontCurrentOutput"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <TextView
+        android:id="@+id/previousOutput"
+        android:layout_width="374dp"
+        android:layout_height="96dp"
+        android:background="@color/md_theme_light_surfaceVariant"
+        android:gravity="right"
+        android:text="Previous"
+        android:textSize="@dimen/fontPreviousOutput"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="26dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
