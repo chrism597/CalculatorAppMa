@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="square_button" parent="Widget.AppCompat.Button">
-        <item name="android:layout_width"> 81dp </item>
-        <item name="android:layout_height"> 62dp </item>
-
-        <item name="background">#D2C8C8</item>
-
-        <item name="android:layout_marginLeft">15dp</item>
-        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="background">@color/cardview_light_background</item>
+        <item name="android:layout_marginLeft">25dp</item>
+        <item name="android:layout_marginRight">25dp</item>
+        <item name="android:textSize">20sp</item>
     </style>
-    <dimen name="fontCurrentOutput">40sp</dimen>
-    <dimen name="fontPreviousOutput">20sp</dimen>
-    <dimen name="gravityForAll">right</dimen>
+    <dimen name="fontCurrentOutput">20sp</dimen>
+    <dimen name="textViewWidth">52dp</dimen>
+    <dimen name="textViewLength">380dp</dimen>
+    <dimen name="leftMargin">5dp</dimen>
+    <dimen name="rightMargin">5dp</dimen>
+    <dimen name="topMargin">5dp</dimen>
+    <dimen name="bottomMargin">5dp</dimen>
 </resources>
