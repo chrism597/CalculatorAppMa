@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("MissingInflatedId")
     @Override
+    /**
+     * This method initializes all of the variables made above
+     */
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -102,6 +105,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            /**
+             * This method changes the focus from the first input field to the second automatically if the user has entered a number and a operator
+             * in the first field.
+             * @param s
+             * @param start
+             * @param before
+             * @param count
+             */
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 if(operatorSelected(firstOperand.getText().toString())) {
@@ -113,6 +124,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the number 1 on the calculator screen
+         */
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -125,7 +139,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 2 on the calculator screen
+         */
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -138,7 +154,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 3 on the calculator screen
+         */
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -151,7 +169,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 5 on the calculator screen
+         */
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -164,7 +184,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 5 on the calculator screen
+         */
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -177,7 +199,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 6 on the calculator screen
+         */
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -190,7 +214,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 7 on the calculator screen
+         */
         b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -203,7 +229,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 8 on the calculator screen
+         */
         b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -216,7 +244,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 9 on the calculator screen
+         */
         b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -229,7 +259,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the number 0 on the calculator screen
+         */
         b0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -242,6 +274,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        /**
+         * This method is used to input the decimal point for a floating point number.
+         */
         bDecimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -254,7 +289,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
+        /**
+         * This method is used to input the operator + on the calculator screen and trigger the ADDITION operation.
+         */
         bAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -272,6 +309,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the operator - on the calculator screen and trigger the SUBTRACTION operation.
+         */
         bSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -289,6 +329,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the operator x on the calculator screen and trigger the MULTIPLICATION operation.
+         */
         bMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -306,6 +349,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the operator / on the calculator screen and trigger the DIVISION operation.
+         */
         bDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -319,6 +365,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the operator ^ on the calculator screen and trigger the EXPONENTIAL operation
+         */
         bPower.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -332,6 +381,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the operator √ on the calculator screen and trigger the GENERIC ROOT operation
+         */
         bRoot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -345,6 +397,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the operator log on the calculator screen and trigger the LOGARITHM operation
+         */
         bLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -357,6 +412,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the operator ln on the calculator screen and trigger the NATURAL LOG operation
+         */
         bLn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -369,6 +427,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method is used to input the operator % on the calculator screen and trigger the MOD operation
+         */
         bMod.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -386,6 +447,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        /**
+         * This method changes the current number to a negative number when the NEGATE button is clicked.
+         */
         bNegate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -408,6 +472,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        /**
+         * This method is used to trigger the operation() method to perform the required calculations.
+         */
         bEqualsTo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -426,6 +493,9 @@ public class MainActivity extends AppCompatActivity {
                 firstOperand.requestFocus();
             }
         });
+        /**
+         * This method is used by the AC button and resets all of the input boxes to their original state.
+         */
         bAllClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -435,6 +505,9 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
+        /**
+         * This method is used for the Del button, it will remove the rightmost character from the current text field.
+         */
         bDeleteOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -451,20 +524,37 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    /**
+     * This method will clear the error message in the output field.
+     */
     private void ifErrorOnOutput() {
         if (output.getText().toString().equals("Error")) {
             output.setText("");
         }
     }
+
+    /**
+     * This method will automatically adjust the text size if the value exceeds a certain length.
+     */
     private void exceedLength() {
         if (firstOperand.getText().toString().length() > 16) {
             firstOperand.setTextSize(TypedValue.COMPLEX_UNIT_SP, 32);
         }
     }
+
+    /**
+     * This method will check if the inputed value is a decimal number or not.
+     * @param value
+     * @return true if the number has a decimal point, otherwise false
+     */
     private boolean isDecimal(double value) {
         return value == (int) value;
     }
 
+    /**
+     * This method is where all of the calculations happen.
+     */
     private void operation() {
         if (!Double.isNaN(op1)||!Double.isNaN(op2)) {
             switch (OPERATOR) {
@@ -521,6 +611,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
+    /**
+     * This method checks if the first text field has a selected mathematical operator.
+     * @param firstOp - the String value of the first text field
+     * @return true if it contains an operator or false otherwise
+     */
     private boolean operatorSelected(String firstOp){
         return firstOp.contains("+")
                 ||firstOp.contains("-")

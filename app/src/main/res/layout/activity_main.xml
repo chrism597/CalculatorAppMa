@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/md_theme_light_background"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
+    //This Button is used to input the number 1
     <Button
         android:id="@+id/calc1"
         style="@style/square_button"
@@ -20,6 +22,7 @@
         app:layout_constraintVertical_bias="0.83"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 2
     <Button
         android:id="@+id/calc2"
         style="@style/square_button"
@@ -34,6 +37,7 @@
         app:layout_constraintVertical_bias="0.83"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 3
     <Button
         android:id="@+id/calc3"
         style="@style/square_button"
@@ -47,6 +51,7 @@
         app:layout_constraintVertical_bias="0.83"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 4
     <Button
         android:id="@+id/calc4"
         style="@style/square_button"
@@ -60,6 +65,7 @@
         app:layout_constraintVertical_bias="0.7"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 5
     <Button
         android:id="@+id/calc5"
         style="@style/square_button"
@@ -73,6 +79,7 @@
         app:layout_constraintVertical_bias="0.7"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 6
     <Button
         android:id="@+id/calc6"
         style="@style/square_button"
@@ -86,6 +93,7 @@
         app:layout_constraintVertical_bias="0.7"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 7
     <Button
         android:id="@+id/calc7"
         style="@style/square_button"
@@ -99,6 +107,7 @@
         app:layout_constraintVertical_bias="0.562"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 8
     <Button
         android:id="@+id/calc8"
         style="@style/square_button"
@@ -112,6 +121,7 @@
         app:layout_constraintVertical_bias="0.562"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 9
     <Button
         android:id="@+id/calc9"
         style="@style/square_button"
@@ -125,6 +135,7 @@
         app:layout_constraintVertical_bias="0.562"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input the number 0
     <Button
         android:id="@+id/calc0"
         style="@style/square_button"
@@ -138,6 +149,7 @@
         app:layout_constraintVertical_bias="0.96"
         tools:ignore="MissingConstraints" />
 
+    //This Button is used to input a DECIMAL in your number
     <Button
         android:id="@+id/calcDecimal"
         style="@style/square_button"
@@ -151,6 +163,7 @@
         app:layout_constraintVertical_bias="0.96"
         tools:ignore="MissingConstraints" />
 
+    //This Button isued to input a NEGATIVE into your number
     <Button
         android:id="@+id/calcNegative"
         style="@style/square_button"
@@ -164,6 +177,7 @@
         app:layout_constraintVertical_bias="0.96"
         tools:ignore="MissingConstraints" />
 
+    //This button is used to clear all of the pervious inputs and outputs
     <Button
         android:id="@+id/calcAllClear"
         style="@style/square_button"
@@ -177,6 +191,7 @@
         app:layout_constraintVertical_bias="0.429"
         tools:ignore="MissingConstraints" />
 
+    //This button is used to calculate an exponent
     <Button
         android:id="@+id/calcExponent"
         style="@style/square_button"
@@ -190,6 +205,7 @@
         app:layout_constraintVertical_bias="0.429"
         tools:ignore="MissingConstraints" />
 
+    //This button is used to calculate a root function
     <Button
         android:id="@+id/calcSquareRoot"
         style="@style/square_button"
@@ -203,10 +219,10 @@
         app:layout_constraintVertical_bias="0.429"
         tools:ignore="MissingConstraints" />
 
+    //This button is used for multiplication
     <Button
         android:id="@+id/calcMultiply"
         style="@style/square_button"
-
         android:backgroundTint="@color/md_theme_dark_inversePrimary"
         android:gravity="center"
         android:text="X"
@@ -217,6 +233,7 @@
         app:layout_constraintVertical_bias="0.562"
         tools:ignore="MissingConstraints" />
 
+    //This button us used for division
     <Button
         android:id="@+id/calcDivision"
         style="@style/square_button"
@@ -230,6 +247,7 @@
         app:layout_constraintVertical_bias="0.429"
         tools:ignore="MissingConstraints" />
 
+    //This button is used for addition
     <Button
         android:id="@+id/calcAddition"
         style="@style/square_button"
@@ -243,6 +261,7 @@
         app:layout_constraintVertical_bias="0.83"
         tools:ignore="MissingConstraints" />
 
+    //This button is used for subtraction
     <Button
         android:id="@+id/calcSubtraction"
         style="@style/square_button"
@@ -257,6 +276,7 @@
         app:layout_constraintVertical_bias="0.7"
         tools:ignore="MissingConstraints" />
 
+    //This button is used to trigger the calculate function
     <Button
         android:id="@+id/calcEqualsTo"
         style="@style/square_button"
@@ -270,6 +290,7 @@
         app:layout_constraintVertical_bias="0.96"
         tools:ignore="MissingConstraints" />
 
+    //This EditText is to input your first half of the equation including the mathematical operator
     <EditText
         android:id="@+id/firstInput"
         android:layout_width="@dimen/textViewLength"
@@ -284,6 +305,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    //This EditText is used for the output of the equation
     <EditText
         android:id="@+id/calcOutput"
         android:layout_width="@dimen/textViewLength"
@@ -300,6 +322,7 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
+    //This input is used for the second number of the equation
     <EditText
         android:id="@+id/secondInput"
         android:layout_width="@dimen/textViewLength"
@@ -315,6 +338,7 @@
         app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
+    //This button is used to delete one single input of the equation
     <Button
         android:id="@+id/calcDelete"
         style="@style/square_button"
@@ -328,6 +352,7 @@
         app:layout_constraintVertical_bias="0.304"
         tools:ignore="MissingConstraints" />
 
+    //This button is used for mod
     <Button
         android:id="@+id/calcMod"
         style="@style/square_button"
@@ -341,6 +366,7 @@
         app:layout_constraintVertical_bias="0.304"
         tools:ignore="MissingConstraints" />
 
+    //This button is used to calculate logarithms
     <Button
         android:id="@+id/calcLog"
         style="@style/square_button"
@@ -354,6 +380,7 @@
         app:layout_constraintVertical_bias="0.304"
         tools:ignore="MissingConstraints" />
 
+    This button is used to calculate natrual logrithms
     <Button
         android:id="@+id/calcLn"
         style="@style/square_button"
@@ -367,6 +394,7 @@
         app:layout_constraintVertical_bias="0.304"
         tools:ignore="MissingConstraints" />
 
+    //This TextView is a label
     <TextView
         android:id="@+id/editTextText"
         android:layout_width="wrap_content"
