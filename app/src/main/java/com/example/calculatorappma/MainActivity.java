@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
     private double op1 = Double.NaN;
     private double op2 = Double.NaN;
     private double result = Double.NaN;
+    private boolean calculated = false;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -132,11 +133,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
-                if (firstOperand.hasFocus()) {
-                    firstOperand.setText(firstOperand.getText().toString() + "1");
-                } else {
-                    secondOperand.setText(secondOperand.getText().toString() + "1");
+                reset();
+                if (!calculated){
+                    if (firstOperand.hasFocus()) {
+                        firstOperand.setText(firstOperand.getText().toString() + "1");
+                        firstOperand.setSelection(firstOperand.getText().length());
+                    } else {
+                        secondOperand.setText(secondOperand.getText().toString() + "1");
+                        secondOperand.setSelection(secondOperand.getText().length());
+                    }
                 }
+
             }
         });
         /**
@@ -147,10 +154,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "2");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "2");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -162,10 +172,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "3");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "3");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -177,10 +190,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "4");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "4");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -192,10 +208,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "5");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "5");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -207,10 +226,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "6");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "6");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -222,10 +244,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "7");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "7");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -237,10 +262,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "8");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "8");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -252,10 +280,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "9");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "9");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -267,10 +298,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + "0");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + "0");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -282,10 +316,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 ifErrorOnOutput();
                 exceedLength();
+                reset();
                 if (firstOperand.hasFocus()) {
                     firstOperand.setText(firstOperand.getText().toString() + ".");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     secondOperand.setText(secondOperand.getText().toString() + ".");
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
         });
@@ -300,8 +337,10 @@ public class MainActivity extends AppCompatActivity {
                     op1 = Double.parseDouble(firstOperand.getText().toString());
                     if (!isDecimal(op1)) {
                         firstOperand.setText(op1 + " + ");
+                        firstOperand.setSelection(firstOperand.getText().length());
                     } else {
                         firstOperand.setText((int) op1 + " + ");
+                        firstOperand.setSelection(firstOperand.getText().length());
                     }
                 } else {
                     output.setText("Error");
@@ -320,8 +359,10 @@ public class MainActivity extends AppCompatActivity {
                     op1 = Double.parseDouble(firstOperand.getText().toString());
                     if (!isDecimal(op1)) {
                         firstOperand.setText(op1 + " - ");
+                        firstOperand.setSelection(firstOperand.getText().length());
                     } else {
                         firstOperand.setText((int) op1 + " - ");
+                        firstOperand.setSelection(firstOperand.getText().length());
                     }
                 } else {
                     output.setText("Error");
@@ -340,8 +381,10 @@ public class MainActivity extends AppCompatActivity {
                     op1 = Double.parseDouble(firstOperand.getText().toString());
                     if (!isDecimal(op1)) {
                         firstOperand.setText(op1 + " x ");
+                        firstOperand.setSelection(firstOperand.getText().length());
                     } else {
                         firstOperand.setText((int) op1 + " x ");
+                        firstOperand.setSelection(firstOperand.getText().length());
                     }
                 } else {
                     output.setText("Error");
@@ -359,6 +402,7 @@ public class MainActivity extends AppCompatActivity {
                     OPERATOR = DIVISION;
                     op1 = Double.parseDouble(firstOperand.getText().toString());
                     firstOperand.setText(op1 + " / ");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     output.setText("Error");
                 }
@@ -375,6 +419,7 @@ public class MainActivity extends AppCompatActivity {
                     OPERATOR = EXPONENT;
                     op1 = Double.parseDouble(firstOperand.getText().toString());
                     firstOperand.setText(op1 + " ^ ");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     output.setText("Error");
                 }
@@ -391,6 +436,7 @@ public class MainActivity extends AppCompatActivity {
                     OPERATOR = ROOT;
                     op1 = Double.parseDouble(firstOperand.getText().toString());
                     firstOperand.setText(" √ " + op1);
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     output.setText("Error");
                 }
@@ -406,6 +452,7 @@ public class MainActivity extends AppCompatActivity {
                 if (firstOperand.getText().length() == 0) {
                     OPERATOR = LOG;
                     firstOperand.setText("Log ");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     output.setText("Error");
                 }
@@ -421,6 +468,7 @@ public class MainActivity extends AppCompatActivity {
                 if (firstOperand.getText().length() == 0) {
                     OPERATOR = LN;
                     firstOperand.setText("Ln ");
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     output.setText("Error");
                 }
@@ -438,8 +486,10 @@ public class MainActivity extends AppCompatActivity {
                     op1 = Double.parseDouble(firstOperand.getText().toString());
                     if (!isDecimal(op1)) {
                         firstOperand.setText(op1 + " % ");
+                        firstOperand.setSelection(firstOperand.getText().length());
                     } else {
                         firstOperand.setText((int) op1 + " % ");
+                        firstOperand.setSelection(firstOperand.getText().length());
                     }
                 } else {
                     output.setText("Error");
@@ -453,11 +503,12 @@ public class MainActivity extends AppCompatActivity {
         bNegate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                reset();
                 if (firstOperand.hasFocus()) {
                     if(firstOperand.length() > 0 && !operatorSelected(firstOperand.getText().toString())){
                         if(!firstOperand.getText().toString().contains("-")) {
                             firstOperand.setText("-" + firstOperand.getText().toString());
+                            firstOperand.setSelection(firstOperand.getText().length());
                             op1 = Double.parseDouble(firstOperand.getText().toString());
                         }
                     }
@@ -465,6 +516,7 @@ public class MainActivity extends AppCompatActivity {
                     if(secondOperand.length() > 0 && !operatorSelected(firstOperand.getText().toString())){
                         if(!secondOperand.getText().toString().contains("-")) {
                             secondOperand.setText("-" + secondOperand.getText().toString());
+                            secondOperand.setSelection(secondOperand.getText().length());
                             op2 = Double.parseDouble(secondOperand.getText().toString());
                         }
                     }
@@ -483,14 +535,17 @@ public class MainActivity extends AppCompatActivity {
                     op2 = Double.parseDouble(secondOperand.getText().toString());
                     if (!isDecimal(op2)) {
                         secondOperand.setText(String.valueOf(op2));
+                        secondOperand.setSelection(secondOperand.getText().length());
                     } else {
                         secondOperand.setText(String.valueOf((int) op2));
+                        secondOperand.setSelection(secondOperand.getText().length());
                     }
                 } else {
                     output.setText("Error");
                 }
                 operation();
                 firstOperand.requestFocus();
+                calculated = true;
             }
         });
         /**
@@ -512,12 +567,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String tempStr = "";
+                reset();
                 if(firstOperand.hasFocus() && firstOperand.length() > 0) {
                     tempStr = firstOperand.getText().toString().substring(0,firstOperand.getText().toString().length()-1);
                     firstOperand.setText(tempStr);
+                    firstOperand.setSelection(firstOperand.getText().length());
                 } else if(secondOperand.hasFocus() && secondOperand.length() > 0){
                     tempStr = secondOperand.getText().toString().substring(0,secondOperand.getText().toString().length()-1);
                     secondOperand.setText(tempStr);
+                    secondOperand.setSelection(secondOperand.getText().length());
                 }
             }
 
@@ -610,6 +668,14 @@ public class MainActivity extends AppCompatActivity {
             output.setText("Error");
         }
 
+    }
+    private void reset() {
+        if(calculated) {
+            firstOperand.setText("");
+            secondOperand.setText("");
+            output.setText("");
+            calculated = false;
+        }
     }
 
     /**

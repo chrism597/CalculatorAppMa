@@ -359,7 +359,7 @@
         android:backgroundTint="@color/md_theme_dark_inversePrimary"
         android:gravity="center"
         android:text="Mod"
-        android:textSize="10sp"
+        android:textSize="9sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/calcDelete"
         app:layout_constraintTop_toTopOf="parent"
