@@ -513,7 +513,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 } else {
-                    if(secondOperand.length() > 0 && !operatorSelected(firstOperand.getText().toString())){
+                    if(secondOperand.length() > 0 && !operatorSelected(secondOperand.getText().toString())){
                         if(!secondOperand.getText().toString().contains("-")) {
                             secondOperand.setText("-" + secondOperand.getText().toString());
                             secondOperand.setSelection(secondOperand.getText().length());
@@ -685,15 +685,15 @@ public class MainActivity extends AppCompatActivity {
      */
     private boolean operatorSelected(String firstOp){
         return firstOp.contains("+")
-                ||firstOp.contains("-")
-                ||firstOp.contains("x")
-                ||firstOp.contains("/")
-                ||firstOp.contains("^")
-                ||firstOp.contains("√")
-                ||firstOp.contains("+")
+                ||firstOp.contains(" - ")
+                ||firstOp.contains(" x ")
+                ||firstOp.contains(" / ")
+                ||firstOp.contains(" ^ ")
+                ||firstOp.contains(" √ ")
+                ||firstOp.contains(" + ")
                 ||firstOp.contains("Log")
                 ||firstOp.contains("Ln")
-                ||firstOp.contains("%");
+                ||firstOp.contains(" % ");
 
         }
 }
