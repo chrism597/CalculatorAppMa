@@ -449,14 +449,14 @@ public class MainActivity extends AppCompatActivity {
         bLog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                reset();
                 if (firstOperand.getText().length() == 0) {
                     OPERATOR = LOG;
-                    firstOperand.setText("Log ");
+                    firstOperand.setText("Log");
                     firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     output.setText("Error");
                 }
-
             }
         });
         /**
@@ -465,9 +465,10 @@ public class MainActivity extends AppCompatActivity {
         bLn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                reset();
                 if (firstOperand.getText().length() == 0) {
                     OPERATOR = LN;
-                    firstOperand.setText("Ln ");
+                    firstOperand.setText("Ln");
                     firstOperand.setSelection(firstOperand.getText().length());
                 } else {
                     output.setText("Error");
